@@ -1,3 +1,4 @@
+% Copyright(c)2019 epsilon-d All rights reserved.
 % This program is program to find solution of f(x) = x^3 + 2*x^2 - 1 using secant method.
 % Suppose that we know that f(0) = -1 < 0 and f(1) = 2 > 0
 
