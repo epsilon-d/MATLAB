@@ -13,21 +13,24 @@ y = fnc_secant(x);
 p1 = 0;
 p2 = 1;
 p3 = 1;
+n = 3;
 
 while abs(fnc_secant(p3)) > 1e-6
     
     p3 = p1 - ( fnc_secant(p1)*(p2 - p1)/( fnc_secant(p2) - fnc_secant(p1) ) );
 
-    comment_1 = 'p3 is %f\n';
-    comment_2 = 'f(p3) is %f\n\n';
-    fprintf(comment_1,p3)
-    fprintf(comment_2,p3)
+    comment_1 = 'p%d is %f\n';
+    comment_2 = 'f(p%d) is %f\n\n';
+    fprintf(comment_1,n,p3)
+    fprintf(comment_2,n,p3)
     
     if fnc_secant(p3) > 0
         p2 = p3;
     else
         p1 = p3;
     end
+    
+    n = n+1;
     
 end
 
